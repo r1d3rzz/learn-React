@@ -1,15 +1,19 @@
 import React from "react";
 
-import Toolbar from "./Toolbar";
+const Items = ({ name, price }) => (
+  <li>
+    {name} = $ {price}
+  </li>
+);
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Toolbar>
-          <h1>Hello React</h1>
-          <p>This is the Test.</p>
-        </Toolbar>
+        <h1>Hello React</h1>
+        <ul>
+          <Items name="Orange" price="20" />
+        </ul>
       </div>
     );
   }
