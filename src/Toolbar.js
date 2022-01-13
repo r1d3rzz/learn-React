@@ -1,10 +1,25 @@
 import React from "react";
 
-import "./Toolbar.css";
+const styles = {
+  toolBar: {
+    backgroundColor: "cyan",
+    padding: 20,
+  },
+  borderStyle: {
+    border: "5px solid blue",
+    padding: 30,
+    margin: 10,
+    borderRadius: 10,
+  },
+};
 
 class Toolbar extends React.Component {
   render() {
-    return <div className="toolBar">{this.props.children}</div>;
+    return (
+      <div style={(styles.toolBar, styles.borderStyle)}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 
